@@ -19,7 +19,7 @@ class MockFlutterAppIconChangerPlatform
   Future<bool> isSupported() => Future.value(true);
 
   @override
-  Future<void> setAvailableIcons(AppIconsSet iconsSet) async {}
+  Future<void> setAvailableIcons(List<AppIcon> iconsSet) async {}
 }
 
 void main() {
@@ -29,7 +29,7 @@ void main() {
   final fakePlatform = MockFlutterAppIconChangerPlatform();
   FlutterAppIconChangerPlatform.instance = fakePlatform;
   final flutterAppIconChangerPlugin =
-      FlutterAppIconChangerPlugin(iconsSet: AppIconsSetTest());
+      FlutterAppIconChangerPlugin(iconsSet: [AppIconTest()]);
 
   test('$MethodChannelFlutterAppIconChanger is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelFlutterAppIconChanger>());
@@ -53,11 +53,6 @@ void main() {
   test('changeIcon', () async {
     expect(await flutterAppIconChangerPlugin.changeIcon('newIcon'), true);
   });
-}
-
-@visibleForTesting
-class AppIconsSetTest extends AppIconsSet {
-  AppIconsSetTest() : super(iconsSet: [AppIconTest()]);
 }
 
 @visibleForTesting

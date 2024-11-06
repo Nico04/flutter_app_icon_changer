@@ -8,7 +8,7 @@ import 'flutter_app_icon_changer_platform_interface.dart';
 /// It interfaces with the platform-specific implementations to change the app icon at runtime.
 class FlutterAppIconChangerPlugin {
   /// The set of available app icons.
-  final AppIconsSet iconsSet;
+  final List<AppIcon> iconsSet;
 
   FlutterAppIconChangerPlugin({required this.iconsSet}) {
     _setAvailableIcons();

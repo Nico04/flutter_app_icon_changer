@@ -3,16 +3,16 @@
 ## Description
 This project demonstrates how to implement the functionality of changing app icons in a Flutter application for both Android and iOS platforms.
 
-| Android                                                                              | iOS                                  |
-|--------------------------------------------------------------------------------------|--------------------------------------|
-| <img src="./readme_images/android_demo.gif" alt="Android" width="300" height="660"/> | <img src="./readme_images/ios_demo.gif" alt="iOS"/> |
+| Android                                           | iOS                                       |
+|---------------------------------------------------|-------------------------------------------|
+| ![Android demo](./readme_images/android_demo.gif) | ![iOS demo](./readme_images/ios_demo.gif) |
 
 ## Getting Started
 
 To get started with the examples, clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/Vabiel/flutter_app_icon_changer.git
+git clone https://github.com/Innim/flutter_app_icon_changer.git
 cd flutter_app_icon_changer
 ```
 
@@ -224,7 +224,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _flutterAppIconChangerPlugin = FlutterAppIconChangerPlugin(
-    iconsSet: CustomIconsSet(),
+    iconsSet: CustomIcons.list,
   );
 
   CustomIcon _currentIcon = CustomIcons.defaultIcon;

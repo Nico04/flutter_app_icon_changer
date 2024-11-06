@@ -39,3 +39,9 @@ abstract class AppIcon {
     };
   }
 }
+
+extension AppIconExt on List<AppIcon> {
+  List<Map<String, dynamic>> toDataSet() {
+    return map((e) => e.data).toList();
+  }
+}

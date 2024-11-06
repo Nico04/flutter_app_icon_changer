@@ -36,7 +36,7 @@ class MethodChannelFlutterAppIconChanger extends FlutterAppIconChangerPlatform {
 
   /// Sets the available icons for the plugin.
   @override
-  Future<void> setAvailableIcons(AppIconsSet iconsSet) async {
+  Future<void> setAvailableIcons(List<AppIcon> iconsSet) async {
     final dataSet = iconsSet.toDataSet();
     await methodChannel.invokeMethod('setAvailableIcons', {'icons': dataSet});
   }

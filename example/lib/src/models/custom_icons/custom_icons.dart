@@ -12,7 +12,7 @@ class CustomIcons {
   static final defaultIcon = DefaultIcon();
 
   /// A list of all available [CustomIcon] instances.
-  static final List<CustomIcon> values = [
+  static final List<CustomIcon> list = [
     CustomIcons.purpleIcon,
     CustomIcons.redIcon,
     CustomIcons.defaultIcon,
@@ -40,7 +40,7 @@ sealed class CustomIcon extends AppIcon {
   factory CustomIcon.fromString(String? icon) {
     if (icon == null) return CustomIcons.defaultIcon;
 
-    return CustomIcons.values.firstWhere(
+    return CustomIcons.list.firstWhere(
       (e) => e.iOSIcon == icon || e.androidIcon == icon,
       orElse: () => CustomIcons.defaultIcon,
     );

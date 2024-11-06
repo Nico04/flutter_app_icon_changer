@@ -46,7 +46,7 @@ void main() {
   });
 
   test('setAvailableIcons', () async {
-    await platform.setAvailableIcons(AppIconsSetTest());
+    await platform.setAvailableIcons([AppIconTest()]);
 
     // Verify no exception is thrown and method completes
     expect(true, isTrue);

@@ -46,7 +46,7 @@ abstract class FlutterAppIconChangerPlatform extends PlatformInterface {
   }
 
   /// Sets the available icons for the plugin.
-  Future<void> setAvailableIcons(AppIconsSet iconsSet) async {
+  Future<void> setAvailableIcons(List<AppIcon> iconsSet) async {
     throw UnimplementedError('setAvailableIcons() has not been implemented.');
   }
 }

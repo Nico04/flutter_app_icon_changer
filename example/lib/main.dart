@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _flutterAppIconChangerPlugin = FlutterAppIconChangerPlugin(
-    iconsSet: CustomIconsSet(),
+    iconsSet: CustomIcons.list,
   );
 
   CustomIcon _currentIcon = CustomIcons.defaultIcon;
