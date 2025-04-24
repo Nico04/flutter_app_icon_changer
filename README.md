@@ -147,46 +147,9 @@ open ios/Runner.xcworkspace
 * Add the icon images of appropriate sizes to each app icon set.
 **Important:** The icons must be of the AppIcon type (app icon sets), not regular image sets.
 
-2.	**Modify Info.plist:**
-Open the file ios/Runner/Info.plist and add the alternate icons under the CFBundleIcons key:
-
-```xml
-<key>CFBundleIcons</key>
-<dict>
-    <key>CFBundlePrimaryIcon</key>
-    <dict>
-        <key>CFBundleIconFiles</key>
-        <array>
-            <string>AppIcon</string>
-        </array>
-    </dict>
-    <key>CFBundleAlternateIcons</key>
-    <dict>
-        <key>Icon1</key>
-        <dict>
-            <key>CFBundleIconFiles</key>
-            <array>
-                <string>AppIcon1</string>
-            </array>
-        </dict>
-        <key>Icon2</key>
-        <dict>
-            <key>CFBundleIconFiles</key>
-            <array>
-                <string>AppIcon2</string>
-            </array>
-        </dict>
-    </dict>
-</dict>
-```
-**Explanation:**
-* CFBundlePrimaryIcon defines the default app icon (AppIcon).
-* CFBundleAlternateIcons contains a dictionary of alternate icons.
-* Keys Icon1 and Icon2 are identifiers for your alternate icons used in the code.
-* CFBundleIconFiles contains an array of icon names corresponding to the sets in Assets.xcassets.
-
-3.	**Ensure Naming Consistency:**
-Make sure the names in Info.plist match exactly with the icon set names in Assets.xcassets.
+2.	**Edit XCode project:**
+Open your ios project i.e. Runner in Xcode, then go to Build Settings tab. 
+Go to `Assets Catalog Compiler Options`, and `Set Include All App Icon Assets` to `Yes`.
 
 4.	**Rebuild the Project:**
 After making the changes, run:
